@@ -1,0 +1,16 @@
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\NUnit3.TestAdapter.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\NUnit3.TestAdapter.pdb
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\nunit.engine.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\nunit.engine.api.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\addressbook-web-tests.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\addressbook-web-tests.pdb
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\nunit.framework.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.csproj.AssemblyReference.cache
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.AssemblyInfoInputs.cache
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.AssemblyInfo.cs
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.csproj.CoreCompileInputs.cache
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.csproj.CopyComplete
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.pdb

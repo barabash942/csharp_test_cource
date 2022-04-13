@@ -15,3 +15,4 @@ C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.pdb
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\WebDriver.Support.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\WebDriver.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.csproj.AssemblyReference.cache

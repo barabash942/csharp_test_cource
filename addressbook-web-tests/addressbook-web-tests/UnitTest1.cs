@@ -21,7 +21,7 @@ namespace addressbook_web_tests
             Assert.AreEqual(s3.Size, 7);
 
             s3.Size = 15;
-            Assert.AreEqual(s1.Size, 15);
+            Assert.AreEqual(s3.Size, 15);
 
             s2.Colored = true;
             Assert.IsTrue(s2.Colored);

@@ -7,14 +7,10 @@ namespace addressbook_web_tests
         [Test]
         public void ContactCreationTest()
         {
-            OpenHomePage();
-            Login(new AccountData("admin", "secret"));
-            AddNewContact();
             ContactData contact = new ContactData("Maria", "Potter");
-            FillContactForm(contact);
-            SubmitContactCreation();
-            ReturnToHomePage();
-            Logout();
+
+            app.Contacts.Create(contact);
+            app.Auth.Logout();
         }
     }
 }

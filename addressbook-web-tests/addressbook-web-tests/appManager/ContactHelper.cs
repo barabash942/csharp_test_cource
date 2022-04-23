@@ -23,6 +23,57 @@ namespace addressbook_web_tests
             return this;
         }
 
+        public ContactHelper Modify(int v, int e, ContactData newData)
+        {
+            manager.Navigator.OpenHomePage();
+
+            SelectContact(v);
+            InitContactModification(e);
+            FillContactForm(newData);
+            SubmitContactModification();
+            return this;
+        }
+
+        public ContactHelper Remove(int p)
+        {
+            manager.Navigator.OpenHomePage();
+
+            SelectContact(p);
+            DeleteContact();
+            SubmitContactDeleting();
+            return this;
+        }
+
+        public ContactHelper SelectContact(int index)
+        {
+            driver.FindElement(By.XPath("(//input[@name= 'selected[]'])[" + index + "]")).Click();
+            return this;
+        }
+
+        public ContactHelper InitContactModification(int index)
+        {
+            driver.FindElement(By.XPath("(.//input[@name= 'selected[]'])[" + index + "][1]/following::img[2]")).Click();
+            return this;
+        }
+
+        public ContactHelper SubmitContactModification()
+        {
+            driver.FindElement(By.Name("update")).Click();
+            return this;
+        }
+
+        public ContactHelper DeleteContact()
+        {
+            driver.FindElement(By.XPath("//input[@value= 'Delete']")).Click();
+            return this;
+        }
+
+        public ContactHelper SubmitContactDeleting()
+        {
+            driver.SwitchTo().Alert().Accept();
+            return this;
+        }
+
         public ContactHelper SubmitContactCreation()
         {
             driver.FindElement(By.XPath("//div[@id='content']/form/input[21]")).Click();

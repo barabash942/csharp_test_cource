@@ -3,8 +3,15 @@
 namespace addressbook_web_tests
 {
     [TestFixture]
-    public class ContactModificationTests : BaseTest
+    public class ContactModificationTests : AuthTestBase
     {
+        [SetUp]
+        public void SetUp()
+        {
+            app.Contacts.OpenHomePageCheck();
+            app.Contacts.ContactCreatedCheck();
+        }
+
         [Test]
         public void ContactModificationTest()
         {

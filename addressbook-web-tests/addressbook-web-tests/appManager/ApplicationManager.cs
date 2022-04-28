@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace addressbook_web_tests
@@ -18,7 +19,9 @@ namespace addressbook_web_tests
         protected IWebDriver driver;
         protected string baseURL;
 
-        public ApplicationManager()
+        private static ThreadLocal<ApplicationManager> app = new ThreadLocal<ApplicationManager>();
+
+        private ApplicationManager()
         {
             driver = new FirefoxDriver();
             baseURL = "https://localhost/addressbook/";
@@ -29,15 +32,7 @@ namespace addressbook_web_tests
             contactHelper = new ContactHelper(this);
         }
 
-        public IWebDriver Driver
-        {
-            get
-            {
-                return driver;
-            }
-        }
-
-        public void Stop()
+         ~ApplicationManager()
         {
             try
             {
@@ -46,6 +41,24 @@ namespace addressbook_web_tests
             catch (Exception)
             {
                 // Ignore errors if unable to close the browser
+            }
+        }
+        public static ApplicationManager GetInstance()
+        {
+            if (! app.IsValueCreated)
+            {
+                ApplicationManager newInstance = new ApplicationManager();
+                newInstance.Navigator.OpenHomePage();
+                app.Value = newInstance;
+            }
+            return app.Value;
+        }
+
+        public IWebDriver Driver
+        {
+            get
+            {
+                return driver;
             }
         }
 

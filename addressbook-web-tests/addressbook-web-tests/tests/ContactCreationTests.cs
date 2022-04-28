@@ -2,8 +2,14 @@
 
 namespace addressbook_web_tests
 {
-    class ContactCreationTests : BaseTest
+    public class ContactCreationTests : AuthTestBase
     {
+        [SetUp]
+        public void SetUp()
+        {
+            app.Contacts.OpenHomePageCheck();
+        }
+
         [Test]
         public void ContactCreationTest()
         {

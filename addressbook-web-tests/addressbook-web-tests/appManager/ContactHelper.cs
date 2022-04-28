@@ -14,6 +14,33 @@ namespace addressbook_web_tests
         {
         }
 
+        public void OpenHomePageCheck()
+        {
+            if (!IsHomePageOpen())
+            {
+                manager.Navigator.OpenHomePage();
+            }
+        }
+
+        public void ContactCreatedCheck()
+        {
+            if (!IsAnyContactCreated())
+            {
+                ContactData newcontact = new ContactData("Uno", "Dos");
+                Create(newcontact);
+            }
+        }
+
+        public bool IsHomePageOpen()
+        {
+            return driver.Url == manager.Navigator.baseURL;
+        }
+
+        public bool IsAnyContactCreated()
+        {
+            return IsElementPresent(By.Name("selected[]"));
+        }
+
         public ContactHelper Create(ContactData contact)
         {
             AddNewContact();
@@ -82,12 +109,8 @@ namespace addressbook_web_tests
 
         public ContactHelper FillContactForm(ContactData contact)
         {
-            driver.FindElement(By.Name("firstname")).Click();
-            driver.FindElement(By.Name("firstname")).Clear();
-            driver.FindElement(By.Name("firstname")).SendKeys(contact.FirstName);
-            driver.FindElement(By.Name("lastname")).Click();
-            driver.FindElement(By.Name("lastname")).Clear();
-            driver.FindElement(By.Name("lastname")).SendKeys(contact.LastName);
+            Type(By.Name("firstname"), contact.FirstName);
+            Type(By.Name("lastname"), contact.LastName);
             return this;
         }
 

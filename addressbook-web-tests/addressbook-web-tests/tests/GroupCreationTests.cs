@@ -3,8 +3,14 @@
 namespace addressbook_web_tests
 {
     [TestFixture]
-    public class GroupCreationTests : BaseTest
+    public class GroupCreationTests : AuthTestBase
     {
+        [SetUp]
+        public void SetUp()
+        {
+            app.Groups.GroupPageOpenCheck();
+        }
+
         [Test]
         public void GroupCreationTest()
         {

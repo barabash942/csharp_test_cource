@@ -2,14 +2,11 @@
 
 namespace addressbook_web_tests
 {
-    public class BaseTest
+    public class AuthTestBase : BaseTest
     {
-        protected ApplicationManager app;
-
         [SetUp]
-        public void SetupApplicationManager()
+        public void SetupLogin()
         {
-            app = ApplicationManager.GetInstance();
             app.Auth.Login(new AccountData("admin", "secret"));
         }
     }

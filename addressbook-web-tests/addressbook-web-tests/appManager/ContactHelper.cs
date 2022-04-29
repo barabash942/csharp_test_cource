@@ -79,7 +79,7 @@ namespace addressbook_web_tests
 
         public ContactHelper InitContactModification(int index)
         {
-            driver.FindElement(By.XPath("(.//input[@name= 'selected[]'])[" + index + "][1]/following::img[2]")).Click();
+            driver.FindElement(By.XPath("(.//input[@name= 'selected[]'])[" + index + "]/following::img[2]")).Click();
             return this;
         }
 

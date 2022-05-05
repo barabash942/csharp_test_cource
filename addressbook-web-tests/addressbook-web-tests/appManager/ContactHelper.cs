@@ -24,7 +24,7 @@ namespace addressbook_web_tests
             {
                 var lastName = element.FindElement(By.XPath(".//td[2]"));
                 var firstName = element.FindElement(By.XPath(".//td[3]"));
-                contacts.Add(new ContactData(lastName.Text, firstName.Text));
+                contacts.Add(new ContactData(firstName.Text, lastName.Text));
             }
 
             return contacts;
@@ -89,7 +89,7 @@ namespace addressbook_web_tests
 
         public ContactHelper SelectContact(int index)
         {
-            driver.FindElement(By.XPath("(//input[@name= 'selected[]'])[" + index + "]")).Click();
+            driver.FindElement(By.XPath("(//input[@name= 'selected[]'])[" + (index + 1) + "]")).Click();
             return this;
         }
 

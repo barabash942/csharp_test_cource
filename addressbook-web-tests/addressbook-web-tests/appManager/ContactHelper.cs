@@ -14,6 +14,22 @@ namespace addressbook_web_tests
         {
         }
 
+        public List<ContactData> GetContactList()
+        {
+            List<ContactData> contacts = new List<ContactData>();
+            manager.Navigator.OpenHomePage();
+            ICollection<IWebElement> elements = driver.FindElements(By.CssSelector("tr[name = entry]"));
+
+            foreach (IWebElement element in elements)
+            {
+                var lastName = element.FindElement(By.XPath(".//td[2]"));
+                var firstName = element.FindElement(By.XPath(".//td[3]"));
+                contacts.Add(new ContactData(lastName.Text, firstName.Text));
+            }
+
+            return contacts;
+        }
+
         public void OpenHomePageCheck()
         {
             if (!IsHomePageOpen())

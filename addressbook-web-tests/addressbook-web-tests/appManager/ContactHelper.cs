@@ -1,9 +1,5 @@
 ﻿using OpenQA.Selenium;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace addressbook_web_tests
 {
@@ -14,20 +10,33 @@ namespace addressbook_web_tests
         {
         }
 
+        private List<ContactData> contactCache = null;
+
         public List<ContactData> GetContactList()
         {
-            List<ContactData> contacts = new List<ContactData>();
-            manager.Navigator.OpenHomePage();
-            ICollection<IWebElement> elements = driver.FindElements(By.CssSelector("tr[name = entry]"));
-
-            foreach (IWebElement element in elements)
+            if (contactCache == null)
             {
-                var lastName = element.FindElement(By.XPath(".//td[2]"));
-                var firstName = element.FindElement(By.XPath(".//td[3]"));
-                contacts.Add(new ContactData(firstName.Text, lastName.Text));
-            }
+                contactCache = new List<ContactData>();
 
-            return contacts;
+                manager.Navigator.OpenHomePage();
+                ICollection<IWebElement> elements = driver.FindElements(By.CssSelector("tr[name = entry]"));
+
+                foreach (IWebElement element in elements)
+                {
+                    var lastName = element.FindElement(By.XPath(".//td[2]"));
+                    var firstName = element.FindElement(By.XPath(".//td[3]"));
+                    contactCache.Add(new ContactData(lastName.Text, firstName.Text)
+                    {
+                        Id = element.FindElement(By.TagName("input")).GetAttribute("value")
+                    });
+                }
+            }
+            return new List<ContactData>(contactCache);
+        }
+
+        public int GetContactsCount()
+        {
+            return driver.FindElements(By.CssSelector("tr[name = entry]")).Count;
         }
 
         public void OpenHomePageCheck()
@@ -95,7 +104,7 @@ namespace addressbook_web_tests
 
         public ContactHelper InitContactModification(int index)
         {
-            driver.FindElement(By.XPath("(.//input[@name= 'selected[]'])[" + index + "]/following::img[2]")).Click();
+            driver.FindElement(By.XPath("(.//input[@name= 'selected[]'])[" + (index + 1) + "]/following::img[2]")).Click();
             return this;
         }
 

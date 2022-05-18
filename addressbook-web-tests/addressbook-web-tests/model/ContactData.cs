@@ -7,11 +7,16 @@ namespace addressbook_web_tests
     {
         private string allPhones;
         private string allEmails;
+        private string allContactDetails;
 
         public ContactData(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
+        }
+
+        public ContactData()
+        {
         }
 
         public string FirstName { get; set; }
@@ -61,6 +66,82 @@ namespace addressbook_web_tests
         public string Email2 { get; set; }
 
         public string Email3 { get; set; }
+
+        public string AllContactDetails
+        {
+            get
+            {
+                if (allContactDetails != null)
+                {
+                    return allContactDetails;
+                }
+                else
+                {
+                    return MakeContactDetailsToTest(allContactDetails).Trim();
+                }
+            }
+            set
+            {
+                allContactDetails = value;
+            }
+        }
+
+        public string MakeContactDetailsToTest(string allContactDetails)
+        {
+            if (FirstName == null || FirstName == "")
+            {
+                return "";
+            }
+            return FirstName + " ";
+
+            if (LastName == null || LastName == "")
+            {
+                return "";
+            }
+            return LastName + "\r\n";
+
+            if (Address == null || Address == "")
+            {
+                return "";
+            }
+            return Address + "\r\n" + "\r\n";
+
+            if (HomePhone == null || HomePhone == "")
+            {
+                return "";
+            }
+            return "H: " + HomePhone + "\r\n";
+
+            if (MobilePhone == null || MobilePhone == "")
+            {
+                return "";
+            }
+            return "M: " + MobilePhone + "\r\n";
+
+            if (WorkPhone == null || WorkPhone == "")
+            {
+                return "";
+            }
+            return "W: " + WorkPhone + "\r\n";
+
+            if (Email == null || Email == "")
+            {
+                return "";
+            }
+            return Email + "\r\n";
+
+            if (Email2 == null || Email2 == "")
+            {
+                return "";
+            }
+            return Email2 + "\r\n";
+
+            if (Email3 == null || Email3 == "")
+            {
+                return "";
+            }
+            return Email3;
+        }
 
         private string CleanUp(string phone)
         {

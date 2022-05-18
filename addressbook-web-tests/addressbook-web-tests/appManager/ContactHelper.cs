@@ -83,6 +83,26 @@ namespace addressbook_web_tests
             };
         }
 
+        public ContactData GetContactInformationFromDetails(int index)
+        {
+            manager.Navigator.OpenHomePage();
+            GoToContactDetails(0);
+
+            string allContactDetails = driver.FindElement(By.XPath("//div[@id='content']")).Text;
+
+            return new ContactData()
+            {
+                AllContactDetails = allContactDetails
+            };
+        }
+
+        public ContactHelper GoToContactDetails(int index)
+        {
+            driver.FindElements(By.Name("entry"))[index].FindElements(By.TagName("td"))[6]
+                .FindElement(By.TagName("a")).Click();
+            return this;
+        }
+
         public int GetContactsCount()
         {
             return driver.FindElements(By.CssSelector("tr[name = entry]")).Count;

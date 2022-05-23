@@ -201,7 +201,7 @@ namespace addressbook_web_tests
 
         public override string ToString()
         {
-            return LastName + FirstName;
+            return "FirstName = " + FirstName + "\nLastName= " + LastName;
         }
     }
 }

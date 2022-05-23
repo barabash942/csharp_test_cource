@@ -11,11 +11,19 @@ namespace addressbook_web_tests
             app.Contacts.OpenHomePageCheck();
         }
 
-        [Test]
-        public void ContactCreationTest()
+        public static IEnumerable<ContactData> RandomContactDataProvider()
         {
-            ContactData contact = new ContactData("Mary", "Potter");
+            List<ContactData> contacts = new List<ContactData>();
+            for (int i = 0; i < 5; i++)
+            {
+                contacts.Add(new ContactData(GenerateRandomString(20), GenerateRandomString(15)));
+            }
+            return contacts;
+        }
 
+        [Test, TestCaseSource("RandomContactDataProvider")]
+        public void ContactCreationTest(ContactData contact)
+        {
             List<ContactData> oldContacts = app.Contacts.GetContactList();
 
             app.Contacts.Create(contact);

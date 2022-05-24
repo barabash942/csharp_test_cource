@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[3.16.1, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[3.141.0, )"

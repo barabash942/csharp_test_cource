@@ -17,4 +17,8 @@ C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\WebDriver.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\group.csv
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\groups.xml
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\Newtonsoft.Json.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\bin\Debug\net472\groups.json
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-web-tests\obj\Debug\net472\addressbook-web-tests.csproj.AssemblyReference.cache

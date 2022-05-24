@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tFIBtBA9xNXvSdUMT+nVZVxqvfZil/WgFRaR0kyEHqyZDviOaeWbrCvy7M6htXPQEGhcJETmxl1CK9ubcOKiig==",
+  "dgSpecHash": "VQteBvnCKpMKfsGkbw4lwp9LuZlitE/yYKxpjzrhn0Bvh2vy8ZhEYdfqawh32QYxdt9iMTMbXHGvSOut935SaQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\avbar\\source\\repos\\barabash942\\csharp_test_cource\\addressbook-web-tests\\addressbook-web-tests\\addressbook-web-tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\avbar\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\avbar\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Users\\avbar\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",
+    "C:\\Users\\avbar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\avbar\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\avbar\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
     "C:\\Users\\avbar\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",

@@ -28,3 +28,6 @@ C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\bin\Debug\net5.0\groups.xml
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\bin\Debug\net5.0\groups.json
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\obj\Debug\net5.0\Interop.spsupp.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\obj\Debug\net5.0\addressbook-test-data-generators.csproj.ResolveComReference.cache
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\bin\Debug\net5.0\contacts.xml

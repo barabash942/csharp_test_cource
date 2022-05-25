@@ -1,4 +1,7 @@
 ﻿using NUnit.Framework;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 using System.Collections.Generic;
 
 namespace addressbook_web_tests
@@ -21,7 +24,14 @@ namespace addressbook_web_tests
             return contacts;
         }
 
-        [Test, TestCaseSource("RandomContactDataProvider")]
+        public static IEnumerable<ContactData> ContactDataFromXmlFile()
+        {
+            return (List<ContactData>)
+                new XmlSerializer(typeof(List<ContactData>))
+                    .Deserialize(new StreamReader(@"contacts.xml"));
+        }
+
+        [Test, TestCaseSource("ContactDataFromXmlFile")]
         public void ContactCreationTest(ContactData contact)
         {
             List<ContactData> oldContacts = app.Contacts.GetContactList();

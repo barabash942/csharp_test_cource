@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <COMReference Include="spsupp">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>1</VersionMinor>
+      <VersionMajor>0</VersionMajor>
+      <Guid>580411ed-80ec-4834-ba1f-2eb07a49c80b</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 

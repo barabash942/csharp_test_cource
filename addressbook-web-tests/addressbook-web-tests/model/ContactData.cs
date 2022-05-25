@@ -19,6 +19,11 @@ namespace addressbook_web_tests
         {
         }
 
+        public ContactData(string allContactDetails)
+        {
+            AllContactDetails = allContactDetails;
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Id { get; set; }
@@ -71,76 +76,65 @@ namespace addressbook_web_tests
         {
             get
             {
-                if (allContactDetails != null)
+                if (allContactDetails != null || allContactDetails != "")
                 {
                     return allContactDetails;
                 }
                 else
                 {
-                    return MakeContactDetailsToTest(allContactDetails).Trim();
+                    allContactDetails = "";
+                    if (FirstName == null || FirstName == "")
+                    {
+                        allContactDetails += FirstName + " ";
+                    }
+
+                    if (LastName == null || LastName == "")
+                    {
+                        allContactDetails += LastName + "\r\n";
+                    }
+
+                    if (Address == null || Address == "")
+                    {
+                        allContactDetails += Address + "\r\n\r\n";
+                    }
+
+                    if (HomePhone == null || HomePhone == "")
+                    {
+                        allContactDetails += "H: " + HomePhone + "\r\n";
+                    }
+
+                    if (MobilePhone == null || MobilePhone == "")
+                    {
+                        allContactDetails += "M: " + MobilePhone + "\r\n";
+                    }
+
+                    if (WorkPhone == null || WorkPhone == "")
+                    {
+                        allContactDetails += "W: " + WorkPhone + "\r\n";
+                    }
+
+                    if (Email == null || Email == "")
+                    {
+                        allContactDetails += Email + "\r\n";
+                    }
+
+                    if (Email2 == null || Email2 == "")
+                    {
+                        allContactDetails += Email2 + "\r\n";
+                    }
+
+                    if (Email3 == null || Email3 == "")
+                    {
+                        allContactDetails += Email3;
+                    }
+
+                    return allContactDetails.Trim();
                 }
             }
             set
             {
                 allContactDetails = value;
             }
-        }
-
-        public string MakeContactDetailsToTest(string allContactDetails)
-        {
-            if (FirstName == null || FirstName == "")
-            {
-                return "";
-            }
-            return FirstName + " ";
-
-            if (LastName == null || LastName == "")
-            {
-                return "";
-            }
-            return LastName + "\r\n";
-
-            if (Address == null || Address == "")
-            {
-                return "";
-            }
-            return Address + "\r\n" + "\r\n";
-
-            if (HomePhone == null || HomePhone == "")
-            {
-                return "";
-            }
-            return "H: " + HomePhone + "\r\n";
-
-            if (MobilePhone == null || MobilePhone == "")
-            {
-                return "";
-            }
-            return "M: " + MobilePhone + "\r\n";
-
-            if (WorkPhone == null || WorkPhone == "")
-            {
-                return "";
-            }
-            return "W: " + WorkPhone + "\r\n";
-
-            if (Email == null || Email == "")
-            {
-                return "";
-            }
-            return Email + "\r\n";
-
-            if (Email2 == null || Email2 == "")
-            {
-                return "";
-            }
-            return Email2 + "\r\n";
-
-            if (Email3 == null || Email3 == "")
-            {
-                return "";
-            }
-            return Email3;
         }
 
         private string CleanUp(string phone)

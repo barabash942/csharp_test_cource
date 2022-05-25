@@ -13,10 +13,11 @@ namespace addressbook_test_data_generators
         {
             var dataType = args[0];
             int count = Convert.ToInt32(args[1]);
-            StreamWriter writer = new StreamWriter(args[2]);
-            string format = args[2];
+            string fileName = args[2];
+            string format = args[3];
 
             List<GroupData> groups = new List<GroupData>();
+            List<ContactData> contacts = new List<ContactData>();
 
             for (int i = 0; i < count; i++)
             {
@@ -26,30 +27,41 @@ namespace addressbook_test_data_generators
                     Footer = BaseTest.GenerateRandomString(30)
                 });
             }
-
-            List<ContactData> contacts = new List<ContactData>();
-            for (int i = 0; i < count; i++)
+            if (format == "excel")
             {
-                contacts.Add(new ContactData(BaseTest.GenerateRandomString(10),
-                    BaseTest.GenerateRandomString(15)));
-            }
-            if (dataType == "groups" && format == "csv")
-            {
-                WriteGroupsToCsvFile(groups, writer);
-            }
-            else if (dataType == "groups" && format == "xml")
-            {
-                WriteGroupsToXmlFile(groups, writer);
-            }
-            if (dataType == "contacts" && format == "xml")
-            {
-                WriteContactsToXmlFile(contacts, writer);
+                WriteGroupsToExcelFile(groups, fileName);
             }
             else
             {
-                System.Console.Out.Write("Unrecognized format: " + format);
+                StreamWriter writer = new StreamWriter(fileName);
+                for (int i = 0; i < count; i++)
+                {
+                    contacts.Add(new ContactData(BaseTest.GenerateRandomString(10),
+                        BaseTest.GenerateRandomString(15)));
+                }
+                if (dataType == "groups" && format == "csv")
+                {
+                    WriteGroupsToCsvFile(groups, writer);
+                }
+                else if (dataType == "groups" && format == "xml")
+                {
+                    WriteGroupsToXmlFile(groups, writer);
+                }
+                if (dataType == "contacts" && format == "xml")
+                {
+                    WriteContactsToXmlFile(contacts, writer);
+                }
+                else
+                {
+                    System.Console.Out.Write("Unrecognized format: " + format);
+                }
+                writer.Close();
             }
-            writer.Close();
+        }
+
+        static void WriteGroupsToExcelFile(List<GroupData> groups, string v)
+        {
+
         }
 
         static void WriteGroupsToCsvFile(List<GroupData> groups, StreamWriter writer)

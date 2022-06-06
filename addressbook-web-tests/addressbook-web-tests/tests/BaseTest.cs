@@ -6,6 +6,7 @@ namespace addressbook_web_tests
 {
     public class BaseTest
     {
+        public static bool PERFORM_LONG_UI_CHECKS = true;
         protected ApplicationManager app;
 
         [SetUp]

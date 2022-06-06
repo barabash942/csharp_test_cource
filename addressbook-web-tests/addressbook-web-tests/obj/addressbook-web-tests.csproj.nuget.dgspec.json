@@ -44,6 +44,10 @@
         "net472": {
           "targetAlias": "net472",
           "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
             "MSTest.TestFramework": {
               "target": "Package",
               "version": "[2.2.10, )"
@@ -52,13 +56,17 @@
               "target": "Package",
               "version": "[16.5.0, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.29, )"
+            },
             "NUnit": {
               "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[3.13.3, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.16.1, )"
+              "version": "[4.2.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -71,6 +79,10 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[3.141.0, )"
+            },
+            "linq2db": {
+              "target": "Package",
+              "version": "[2.7.3, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"

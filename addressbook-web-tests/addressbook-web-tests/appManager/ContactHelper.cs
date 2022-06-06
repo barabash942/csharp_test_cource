@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace addressbook_web_tests
 {
@@ -27,7 +28,7 @@ namespace addressbook_web_tests
                 {
                     var lastName = element.FindElement(By.XPath(".//td[2]"));
                     var firstName = element.FindElement(By.XPath(".//td[3]"));
-                    contactCache.Add(new ContactData(lastName.Text, firstName.Text)
+                    contactCache.Add(new ContactData(firstName.Text, lastName.Text)
                     {
                         Id = element.FindElement(By.TagName("input")).GetAttribute("value")
                     });
@@ -86,6 +87,7 @@ namespace addressbook_web_tests
         public ContactData GetContactInformationFromDetails(int index)
         {
             manager.Navigator.OpenHomePage();
+            Thread.Sleep(250);
             GoToContactDetails(0);
 
             string allContactDetails = driver.FindElement(By.XPath("//div[@id='content']")).Text;

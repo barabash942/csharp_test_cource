@@ -58,3 +58,4 @@ C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\obj\Debug\net5.0\addressbook-test-data-generators.genruntimeconfig.cache
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\bin\Debug\net5.0\nunit.engine.core.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\bin\Debug\net5.0\testcentric.engine.metadata.dll
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\addressbook-web-tests\addressbook-test-data-generators\bin\Debug\net5.0\WebDriver.Support.dll

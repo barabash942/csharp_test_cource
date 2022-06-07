@@ -262,6 +262,14 @@
             "fileVersion": "3.13.3.0"
           }
         }
+      },
+      "WebDriver.Support/3.141.0.0": {
+        "runtime": {
+          "WebDriver.Support.dll": {
+            "assemblyVersion": "3.141.0.0",
+            "fileVersion": "3.141.0.0"
+          }
+        }
       }
     }
   },
@@ -441,6 +449,11 @@
       "sha512": ""
     },
     "nunit.framework/3.13.3.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebDriver.Support/3.141.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

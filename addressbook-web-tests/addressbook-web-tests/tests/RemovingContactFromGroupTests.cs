@@ -14,9 +14,13 @@ namespace addressbook_web_tests
             [Test]
             public void TestRemovingContactFromGroup()
             {
+                app.Contacts.ContactCreatedCheck();
+                app.Groups.GroupCreatedCheck();
+
                 GroupData group = GroupData.GetAllFromDb()[0];
                 List<ContactData> oldList = group.GetContacts();
                 ContactData contact = ContactData.GetAllFromDb().First();
+                app.Contacts.ContactAddedInGroupCheck(contact, oldList, group);
 
                 app.Contacts.RemoveContactFromGroup(contact, group);
 

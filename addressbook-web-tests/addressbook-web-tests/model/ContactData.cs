@@ -158,6 +158,18 @@ namespace addressbook_web_tests
             }
         }
 
+        public List<GroupData> GetGroups()
+        {
+            using (AddressBookDB db = new AddressBookDB())
+            {
+                List<GroupData> groups =
+                    (from g in db.Groups
+                     from gcr in db.GCR.Where(p => p.ContactId == Id && p.GroupId == g.Id)
+                     select g).Distinct().ToList();
+                return groups;
+            }
+        }
+
         private string CleanUp(string phone)
         {
             if (phone == null || phone == "")

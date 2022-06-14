@@ -45,7 +45,7 @@ namespace addressbook_web_tests
             SelectContactById(contact.Id);
             SelectGroupToAdd(group.Name);
             CommitAddingContactToGroup();
-            new WebDriverWait(driver, TimeSpan.FromSeconds(10))
+            new WebDriverWait(driver, TimeSpan.FromSeconds(20))
                 .Until(d => d.FindElements(By.CssSelector("div.msgbox")).Count > 0);
         }
 
@@ -208,6 +208,7 @@ namespace addressbook_web_tests
             InitContactModification(e);
             FillContactForm(newData);
             SubmitContactModification();
+            manager.Navigator.OpenHomePage();
             return this;
         }
 
@@ -218,6 +219,8 @@ namespace addressbook_web_tests
             SelectContact(p);
             DeleteContact();
             SubmitContactDeleting();
+            new WebDriverWait(driver, TimeSpan.FromSeconds(5))
+                .Until(d => d.FindElements(By.CssSelector("div.msgbox")).Count > 0);
             return this;
         }
 
@@ -276,6 +279,25 @@ namespace addressbook_web_tests
             string text = driver.FindElement(By.TagName("label")).Text;
             Match m = new Regex(@"\d+").Match(text);
             return Int32.Parse(m.Value);
+        }
+
+        public void AbleToAddContactInGroupCheck(List<GroupData> groupContactList)
+        {
+            List<GroupData> allGroups = GroupData.GetAllFromDb();
+
+            if (allGroups.Count.Equals(groupContactList.Count))
+            {
+                ContactData contact = new ContactData("lastName1", "firstName1");
+                Create(contact);
+            }
+        }
+
+        public void ContactAddedInGroupCheck(ContactData contact, List<ContactData> groupList, GroupData group)
+        {
+            if (groupList.Count == 0)
+            {
+                AddContactToGroup(contact, group);
+            }
         }
     }
 }

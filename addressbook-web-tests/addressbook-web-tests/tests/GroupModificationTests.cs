@@ -16,21 +16,30 @@ namespace addressbook_web_tests
         [Test]
         public void GroupModificationTest()
         {
-            GroupData newData = new GroupData("SomeNewText");
+            if (GroupData.GetAllFromDb().Count == 0)
+            {
+                string name = "GroupNameForTest";
+                GroupData groupForModication = new GroupData(name);
+                app.Groups.Create(groupForModication);
+            }
+
+            GroupData newData = new GroupData();
+            newData.Name = "UpdatedText";
             newData.Header = null;
             newData.Footer = null;
 
-            List<GroupData> oldGroups = app.Groups.GetGroupList();
+            List<GroupData> oldGroups = GroupData.GetAllFromDb();
             GroupData oldData = oldGroups[0];
 
-            app.Groups.Modify(0, newData);
+            app.Groups.Modify(oldData, newData);
 
             Assert.AreEqual(oldGroups.Count, app.Groups.GetGroupCount());
 
-            List<GroupData> newGroups = app.Groups.GetGroupList();
+            List<GroupData> newGroups = GroupData.GetAllFromDb();
             oldGroups[0].Name = newData.Name;
             oldGroups.Sort();
             newGroups.Sort();
+
             Assert.AreEqual(oldGroups, newGroups);
 
             foreach (GroupData group in newGroups)

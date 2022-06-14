@@ -70,6 +70,15 @@ namespace addressbook_web_tests
             return this;
         }
 
+        public void Modify(GroupData oldData, GroupData newData)
+        {
+            SelectGroup(oldData.Id);
+            InitGroupModification();
+            FillGroupForm(newData);
+            SubmitGroupModification();
+            ReturnToGroupPage();
+        }
+
         public GroupHelper SubmitGroupModification()
         {
             driver.FindElement(By.Name("update")).Click();

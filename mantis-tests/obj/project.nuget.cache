@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "nl+4Cp934xFEc4g4udRNTfSRSTPT8eitUivcVhGPFngTsEGqhBvrbRylNKjn62ZpZem3o+6ARBm5nPpBiKLTuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\avbar\\source\\repos\\barabash942\\csharp_test_cource\\mantis-tests\\mantis-tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\avbar\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\avbar\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\avbar\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\avbar\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
+    "C:\\Users\\avbar\\.nuget\\packages\\selenium.support\\4.2.0\\selenium.support.4.2.0.nupkg.sha512",
+    "C:\\Users\\avbar\\.nuget\\packages\\selenium.webdriver\\4.2.0\\selenium.webdriver.4.2.0.nupkg.sha512",
+    "C:\\Users\\avbar\\.nuget\\packages\\system.net.ftpclient\\1.0.5824.34026\\system.net.ftpclient.1.0.5824.34026.nupkg.sha512"
+  ],
+  "logs": []
+}

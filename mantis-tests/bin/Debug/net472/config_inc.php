@@ -5,6 +5,8 @@ $g_database_name          = 'bugtracker';
 $g_db_username            = 'root';
 $g_db_password            = '';
 
+$g_signup_use_captcha = OFF;
+
 $g_default_timezone       = 'Europe/Berlin';
 
 $g_crypto_master_salt     = 'R9nip0tMjobycJhuT3/kuWqhInhP7klNbzVMvqs3rcI=';

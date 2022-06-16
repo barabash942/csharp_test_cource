@@ -1,3 +1,7 @@
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.AssemblyInfoInputs.cache
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.AssemblyInfo.cs
+C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.csproj.CoreCompileInputs.cache
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\bin\Debug\net472\NUnit3.TestAdapter.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\bin\Debug\net472\NUnit3.TestAdapter.pdb
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\bin\Debug\net472\nunit.engine.dll
@@ -13,10 +17,6 @@ C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\bin\Debu
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\bin\Debug\net472\WebDriver.Support.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\bin\Debug\net472\WebDriver.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\bin\Debug\net472\System.Net.FtpClient.dll
-C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.AssemblyInfoInputs.cache
-C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.AssemblyInfo.cs
-C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.csproj.CoreCompileInputs.cache
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.csproj.CopyComplete
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.dll
 C:\Users\avbar\source\repos\barabash942\csharp_test_cource\mantis-tests\obj\Debug\net472\mantis-tests.pdb

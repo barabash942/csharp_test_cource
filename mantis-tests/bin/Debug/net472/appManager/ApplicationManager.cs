@@ -16,6 +16,9 @@ namespace mantis_tests
 
         public RegistrationHelper Registration { get; set; }
         public FtpHelper Ftp { get; set; }
+        public LoginHelper LoginHelper { get; set; }
+        public ProgectHelper ProgectHelper { get; set; }
+        public ManagementMenuHelper ManagementMenuHelper { get; set; }
 
         private static ThreadLocal<ApplicationManager> app = new ThreadLocal<ApplicationManager>();
 
@@ -25,9 +28,12 @@ namespace mantis_tests
             baseURL = "http://localhost/mantisbt-1.3.17/mantisbt-1.3.17/login_page.php";
             Registration = new RegistrationHelper(this);
             Ftp = new FtpHelper(this);
+            LoginHelper = new LoginHelper(this);
+            ProgectHelper = new ProgectHelper(this);
+            ManagementMenuHelper = new ManagementMenuHelper(this);
         }
 
-         ~ApplicationManager()
+        ~ApplicationManager()
         {
             try
             {

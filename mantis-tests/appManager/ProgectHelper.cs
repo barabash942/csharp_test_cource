@@ -50,12 +50,9 @@ namespace mantis_tests
             return this;
         }
 
-        private List<ProjectData> projectsCache = null;
         public List<ProjectData> GetAll()
         {
-            if (projectsCache == null)
-            {
-                projectsCache = new List<ProjectData>();
+            List<ProjectData> projects = new List<ProjectData>();
 
                 manager.ManagementMenuHelper.GoToManageProgectsMenu();
                 ICollection<IWebElement> elements = driver.FindElements(By.XPath("//div[@id='content']/div[2]/table/tbody/tr"));
@@ -63,10 +60,9 @@ namespace mantis_tests
                 {
                     var name = element.FindElement(By.XPath(".//td[1]"));
                     var description = element.FindElement(By.XPath(".//td[5]"));
-                    projectsCache.Add(new ProjectData(name.Text, description.Text));
+                    projects.Add(new ProjectData(name.Text, description.Text));
                 }
-            }
-            return new List<ProjectData>(projectsCache);
+            return new List<ProjectData>(projects);
         }
 
         public int GetProjectsCount()

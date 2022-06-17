@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[4.2.0, )"
             },
+            "SimpleBrowser.WebDriver": {
+              "target": "Package",
+              "version": "[0.5.43, )"
+            },
             "System.Net.FtpClient": {
               "target": "Package",
               "version": "[1.0.5824.34026, )"

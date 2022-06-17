@@ -28,6 +28,15 @@
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
+      "Moq/4.2.1510.2205": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Moq.dll": {}
+        }
+      },
       "NUnit/3.12.0": {
         "type": "package",
         "compile": {
@@ -71,6 +80,32 @@
         },
         "runtime": {
           "lib/net47/WebDriver.dll": {}
+        }
+      },
+      "SimpleBrowser/0.5.61": {
+        "type": "package",
+        "compile": {
+          "lib/net40/RazorHosting.dll": {},
+          "lib/net40/SimpleBrowser.dll": {}
+        },
+        "runtime": {
+          "lib/net40/RazorHosting.dll": {},
+          "lib/net40/SimpleBrowser.dll": {}
+        }
+      },
+      "SimpleBrowser.WebDriver/0.5.43": {
+        "type": "package",
+        "dependencies": {
+          "Moq": "4.2.1510.2205",
+          "Selenium.Support": "3.14.0",
+          "Selenium.WebDriver": "2.46.0",
+          "SimpleBrowser": "0.5.61"
+        },
+        "compile": {
+          "lib/net40/SimpleBrowser.WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/net40/SimpleBrowser.WebDriver.dll": {}
         }
       },
       "System.Net.FtpClient/1.0.5824.34026": {
@@ -139,6 +174,23 @@
         "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
         "microsoft.net.test.sdk.16.5.0.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
+      ]
+    },
+    "Moq/4.2.1510.2205": {
+      "sha512": "nqMoHSP5f04/kyKbRUjGgzqtIb5LUUs0H6llHOkQJ5Takx4Ezr2H+59pkIgxkmpbHAcGmc/KsyRZUs1ehnPYag==",
+      "type": "package",
+      "path": "moq/4.2.1510.2205",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Moq.dll",
+        "lib/net35/Moq.xml",
+        "lib/net40/Moq.dll",
+        "lib/net40/Moq.xml",
+        "lib/sl5/Moq.Silverlight.dll",
+        "lib/sl5/Moq.Silverlight.xml",
+        "moq.4.2.1510.2205.nupkg.sha512",
+        "moq.nuspec"
       ]
     },
     "NUnit/3.12.0": {
@@ -231,6 +283,31 @@
         "selenium.webdriver.nuspec"
       ]
     },
+    "SimpleBrowser/0.5.61": {
+      "sha512": "XMLEHjG7WOzCrau9jQGUh9oR3zWmxM1jrMzf9FCDyUHLH0uBzfxtObGGfqNRNdzlEk1LTFHflHy0KvstYCOCGw==",
+      "type": "package",
+      "path": "simplebrowser/0.5.61",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/RazorHosting.dll",
+        "lib/net40/SimpleBrowser.dll",
+        "simplebrowser.0.5.61.nupkg.sha512",
+        "simplebrowser.nuspec"
+      ]
+    },
+    "SimpleBrowser.WebDriver/0.5.43": {
+      "sha512": "UNqsUTJPUYkMeKO+KhSN510phAuV4ZqhFcFgIeL6yvfYk+RBhrOlAoRJ10zeA1C9Zui8v0a1sh4vcmoxlZXZtQ==",
+      "type": "package",
+      "path": "simplebrowser.webdriver/0.5.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/SimpleBrowser.WebDriver.dll",
+        "simplebrowser.webdriver.0.5.43.nupkg.sha512",
+        "simplebrowser.webdriver.nuspec"
+      ]
+    },
     "System.Net.FtpClient/1.0.5824.34026": {
       "sha512": "U3Ak8SSgMlcyot3jdcE7Ns53/mi8ZicXfhSIsAC53/Lt5ESbe6Byle40+w1B7pd7ZDLEKemhbCtltkA6luXF4g==",
       "type": "package",
@@ -276,6 +353,7 @@
       "NUnit3TestAdapter >= 3.16.1",
       "Selenium.Support >= 4.2.0",
       "Selenium.WebDriver >= 4.2.0",
+      "SimpleBrowser.WebDriver >= 0.5.43",
       "System.Net.FtpClient >= 1.0.5824.34026"
     ]
   },
@@ -342,6 +420,10 @@
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[4.2.0, )"
+          },
+          "SimpleBrowser.WebDriver": {
+            "target": "Package",
+            "version": "[0.5.43, )"
           },
           "System.Net.FtpClient": {
             "target": "Package",
